@@ -6,7 +6,6 @@ RSpec.describe User, type: :model do
 
   before { subject.save }
 
-
   it 'User should be not be Valid' do
     subject.name = nil
     expect(subject).to_not be_valid
