@@ -1,1 +1,15 @@
-<p>This is the first post</p>
+<div id="post_container">
+  <div id="post_details">
+  <div id="post_header">
+    <h3>Post #<%= @post.id%> by <%=@user.name%></h3>
+    <h5>Comments:<%= @post.comments_counter%> Likes: <%=@post.likes_counter%></h5>
+  </div>
+  <p><%= @post.text %></p>
+  </div>
+  <% @comments=Comment.where(post_id:@post.id) %>
+  <div id="users_comment">
+    <% @comments.each do |comment| %>
+      <p><%=@user.name%>: <%= comment.id %></p>
+    <% end %>
+  </div>
+</div>
