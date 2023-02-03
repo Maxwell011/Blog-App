@@ -1,1 +1,24 @@
-<h1>here are individual users</h1>
+<div id="user_details_container">
+  <%= render @user %>
+  <div id="user_bio">
+    <h4>Bio</h4>
+    <p>
+      Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut 
+      labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+  <% @user.last_three_posts.each do |post|%>
+    <div id="users_id">
+      <h3>Post #<%= post.id %></h3>
+      <p><%= post.text %></p>
+      <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
+    </div>
+  <% end %>
+  <div id="button_container">
+  <%= link_to  "See all posts", user_posts_path(@user.id) %>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div id="user_container">
+    <img id="user_img" src="<%= user.photo %>" alt="user profile">
+      <div id="container_container_div">
+        <h3><%= link_to user.name, "/users/#{user.id}"%></h3>
+        <p>Number of posts: <%= user.posts_counter %></p>
+      </div>
+</div>
