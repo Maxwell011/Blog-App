@@ -9,5 +9,4 @@ class PostsController < ApplicationController
     @posts = Post.where(author_id: @user.id)
     @post = Post.find(params[:id])
   end
-
 end
