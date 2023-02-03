@@ -9,7 +9,7 @@
   <% @comments=Comment.where(post_id:@post.id) %>
   <div id="users_comment">
     <% @comments.each do |comment| %>
-      <p><%=@user.name%>: <%= comment.id %></p>
+      <p><%=@user.name%>: <%= comment.id %>Comment: <%= comment.text %></p>
     <% end %>
   </div>
 </div>

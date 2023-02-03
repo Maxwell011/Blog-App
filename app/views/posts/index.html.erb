@@ -11,6 +11,9 @@
       <h3>Post #<%= post.id %></h3>
       <p><%= post.text %></p>
       <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
+       <%= form_with url: "/users/#{@user.id}/posts/#{post.id}/likes" do |f| %>
+        <%= f.submit "like posts"%>
+      <% end %>
     </div>
     <% post.last_five_comments.each do |comment| %>
         <div id="comments">
