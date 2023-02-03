@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @posts = Post.where(author_id: @user.id)
   end
 
-    def new
+  def new
     @post = Post.new
     respond_to do |format|
       format.html { render :new, locals: { post: @post } }
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-   private
+  private
 
   def helper_params
     params.require(:my_post).permit(:title, :text)
