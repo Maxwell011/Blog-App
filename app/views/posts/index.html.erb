@@ -6,7 +6,7 @@
         <p>Number of posts: <%= @user.posts_counter %></p>
       </div>
     </div>
-    <% @posts[0...5].each do |post|%>
+    <% @posts.each do |post|%>
     <div id="user_posts">
       <h3>Post #<%= post.id %></h3>
       <p><%= post.text %></p>
@@ -14,7 +14,7 @@
     </div>
     <% @comments=Comment.where(post_id: post.id)%>
     <div id="comments_container">
-    <% @comments.each do |comment| %>
+    <% @posts.each do |comment| %>
         <div id="comments">
          <%= @user.name%>: <%= comment.text%>
         </div>

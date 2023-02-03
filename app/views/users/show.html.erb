@@ -19,6 +19,6 @@
     </div>
   <% end %>
   <div id="button_container">
-    <button id="see_all_button"><%= link_to "See all posts", "/" %></button>
+  <%= link_to  "See all posts", user_posts_path(@user.id) %>
   </div>
 </div>
