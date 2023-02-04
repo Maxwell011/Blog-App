@@ -5,23 +5,21 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-    respond_to do |format|
-      format.html { render :new, locals: { post: @post } }
-    end
+  render :new, locals: {author: current_user, post: Post.new }
   end
 
   def create
-    @post = Post.new(helper_params)
-    @post.user_id = current_user.id
-    @post.comments_counter = 0
-    @post.likes_counter = 0
-    if @post.save
-      flash[:success] = 'Added succesfully'
-      redirect_to user_posts_path(current_user)
-    else
-      flash.now[:error] = 'question could not  be saved'
-      render :new, locals: { post: @post }
+ respond_to do |format|
+      format.html do
+        @user = current_user
+        @post = @user.posts.new(helper_params)
+        @post.author_id = current_user.id
+        if @post.save
+          redirect_to user_posts_path(@user)
+        else
+          render :new, locals: { author: current_user, post: @post }
+        end
+      end 
     end
   end
 
@@ -34,6 +32,6 @@ class PostsController < ApplicationController
   private
 
   def helper_params
-    params.require(:my_post).permit(:title, :text)
+    params.require(:post).permit(:title, :text).merge(author_id: current_user.id)
   end
 end

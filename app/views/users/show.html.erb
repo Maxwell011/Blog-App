@@ -18,6 +18,7 @@
       <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
     </div>
   <% end %>
+     <%= link_to  "New posts", new_user_post_path(@user) %>
   <div id="button_container">
   <%= link_to  "See all posts", user_posts_path(@user.id) %>
   </div>

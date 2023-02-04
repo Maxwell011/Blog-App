@@ -1,4 +1,4 @@
-<%= form_with model: @comment, url: user_post_comments_path, method: :post, local: true, scope: :my_comment do |f|%>
+<%= form_with model: @comment, url: post_comments_path(@user, @post), method: :post, local: true, scope: :comments do |f|%>
     <div>
       <%= f.label :text%>
       <%= f.text_field :text%>
