@@ -5,11 +5,11 @@ class PostsController < ApplicationController
   end
 
   def new
-  render :new, locals: {author: current_user, post: Post.new }
+    render :new, locals: { author: current_user, post: Post.new }
   end
 
   def create
- respond_to do |format|
+    respond_to do |format|
       format.html do
         @user = current_user
         @post = @user.posts.new(helper_params)
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
         else
           render :new, locals: { author: current_user, post: @post }
         end
-      end 
+      end
     end
   end
 

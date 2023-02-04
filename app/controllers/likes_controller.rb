@@ -11,9 +11,9 @@ class LikesController < ApplicationController
     end
   end
 
-   private
+  private
 
   def like_params
-   { author: current_user, post_id:params.require(:post_id)}
+    { author: current_user, post_id: params.require(:post_id) }
   end
 end
