@@ -2,14 +2,22 @@
   <div id="post_details">
   <div id="post_header">
     <h3>Post #<%= @post.id%> by <%=@user.name%></h3>
-    <h5>Comments:<%= @post.comments_counter%> Likes: <%=@post.likes_counter%></h5>
+    <h5>Comments:<%= render layout: 'shared/tag' do%>
+      <%= @post.comments_counter%> 
+    <% end %> <span>
+    Likes:<%= render layout: 'shared/tag' do%>
+      <%= @post.likes_counter%>
+    <% end %>
+    </span>
   </div>
   <p><%= @post.text %></p>
+  <%= render partial: 'likes/form', locals: {post: @post} %>
+  <%= render partial: 'comments/form', locals: {post: @post} %>
   </div>
   <% @comments=Comment.where(post_id:@post.id) %>
   <div id="users_comment">
     <% @comments.each do |comment| %>
-      <p><%=@user.name%>: <%= comment.id %></p>
+      <p><%=@user.name%>: Comment: <%= comment.text %></p>
     <% end %>
   </div>
 </div>

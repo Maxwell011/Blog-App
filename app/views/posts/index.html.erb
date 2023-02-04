@@ -8,13 +8,15 @@
     </div>
     <% @posts.each do |post|%>
     <div id="user_posts">
+    <%= link_to user_post_path(@user, post) do %>
       <h3>Post #<%= post.id %></h3>
+      <% end %>
       <p><%= post.text %></p>
       <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
     </div>
     <% post.last_five_comments.each do |comment| %>
         <div id="comments">
-         <%= @user.name%>: <%= comment.text%>
+        <%= @user.name%>: <%= comment.text%>
         </div>
     <% end %>
   <% end %>

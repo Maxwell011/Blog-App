@@ -1,0 +1,13 @@
+<%= form_with url: user_posts_path(author), method: :post, scope: :post do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+    </div>
+     <div>
+    <%= f.submit 'Post'%>
+    </div>
+  <% end %>
