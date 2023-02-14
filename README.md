@@ -126,7 +126,7 @@ N/A
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Orji Maxwell**
 
@@ -134,7 +134,11 @@ N/A
 - Twitter: [@Maxwellchu2Orji](https://Maxwellchu2Orji)
 - LinkedIn: [@Orjimaxwell](https://www.linkedin.com/in/chukwuemeka-maxwell)
 
+👤 **Khaled Al-Khateeb**
 
+- GitHub: [@Khaled-AlKhateeb](https://github.com/Khaled-AlKhateeb)
+- Twitter: [@KhaledA93751489](https://twitter.com/KhaledA93751489)
+- LinkedIn: [khaled-al-khateeb](https://www.linkedin.com/in/khaled-al-khateeb-3a1013247/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
