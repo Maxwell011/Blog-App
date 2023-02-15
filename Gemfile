@@ -7,6 +7,9 @@ gem 'faker'
 #  Bundle for bullet gem
 gem 'bullet'
 
+# Bundle for divise
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rubocop', '>= 1.0', '< 2.0'
 
