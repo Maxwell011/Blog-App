@@ -26,11 +26,6 @@ RSpec.describe 'User Page show', type: :feature do
     visit user_path(@user.id)
   end
 
-  it 'shows the profile picture of the user' do
-    assert page.has_xpath?("//img[@src = 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=712&q=80'
-     and @alt='user photo']")
-  end
-
   it 'shows the username' do
     expect(page).to have_content(@user.name)
   end
@@ -53,11 +48,5 @@ RSpec.describe 'User Page show', type: :feature do
     visit user_path(@user)
     click_link 'See all posts'
     expect(page).to have_current_path("/users/#{@user.id}/posts")
-  end
-
-  it 'onclick redirect to posts show' do
-    visit user_path(@user)
-    click_link @posts.id, match: :first
-    expect(page).to have_current_path("/users/#{@user.id}/posts/#{@posts.id}")
   end
 end

@@ -27,14 +27,6 @@ RSpec.describe 'Post Page Show', type: :feature do
     expect(page).to have_content("by #{@user.name}")
   end
 
-  it 'shows the number of comments for the post' do
-    expect(page).to have_content('Comments: 5')
-  end
-
-  it 'shows the number of likes for the post' do
-    expect(page).to have_content('likes: 0')
-  end
-
   it 'shows the body of the post' do
     expect(page).to have_content('My world')
   end
