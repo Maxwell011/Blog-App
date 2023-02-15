@@ -6,7 +6,6 @@ RSpec.describe Like, type: :model do
     @post = Post.create(title: 'Hi', text: 'My world', comments_counter: 0, likes_counter: 1, author_id: 1)
   end
 
-
   it 'checks validity of like present' do
     @like = Like.new(author_id: @user, post_id: @post)
     expect(@like).to_not be_valid
