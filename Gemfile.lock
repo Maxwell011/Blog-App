@@ -73,6 +73,9 @@ GEM
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.7)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.38.0)
       addressable
       matrix
@@ -84,6 +87,12 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
@@ -234,6 +243,7 @@ GEM
     tzinfo-data (1.2022.7)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.4.2)
+    uniform_notifier (1.16.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -256,7 +266,9 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bullet
   capybara
+  database_cleaner
   debug
   faker
   importmap-rails
