@@ -111,3 +111,111 @@
   display: flex;
   justify-content: center;
 }
+
+.sign-up {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  margin: 2em 20em 0 20em;
+}
+
+.sign-in {
+  position: absolute;
+  border: solid black 2px;
+  background-color: white;
+  height: max-content;
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-weight: 700;
+  top: 8.5em;
+  left: 19.2em;
+}
+
+.sign-in:hover {
+  position: absolute;
+  border: azure solid 4px;
+  background-color: rgb(148, 178, 235);
+  height: max-content;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-weight: 700;
+}
+
+.sign-in-color {
+  display: flex;
+  background-color: cornflowerblue;
+  width: 20em;
+  height: 20em;
+  margin: 9em 32em 0 32em;
+  border-radius: 20px;
+}
+
+.sign-out {
+  align-self: center;
+  justify-self: center;
+  border: solid black 2px;
+  background-color: white;
+  height: max-content;
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: 1em;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+.sign-out:hover {
+  align-self: center;
+  justify-self: center;
+  background-color: rgb(148, 178, 235);
+  height: max-content;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+.title_sign_up,
+.title_log_in {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions > .button {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+form > .field,
+a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+  margin: 1rem auto 1rem auto;
+}
+
+.field > input {
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
