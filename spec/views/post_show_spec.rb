@@ -34,4 +34,8 @@ RSpec.describe 'Post Page Show', type: :feature do
   it 'shows the username of each commentor' do
     expect(page).to have_content(@user.name)
   end
+
+  it 'shows comment of each commentor' do
+    expect(page).to have_content('hello yimi')
+  end
 end
