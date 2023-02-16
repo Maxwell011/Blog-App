@@ -183,3 +183,39 @@
   font-weight: 700;
   margin-left: 1em;
 }
+
+.title_sign_up,
+.title_log_in {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions > .button {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+form > .field,
+a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+  margin: 1rem auto 1rem auto;
+}
+
+.field > input {
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
