@@ -117,6 +117,7 @@
   border-radius: 20px;
   margin: 2em 20em 0 20em;
 }
+
 .sign-in {
   position: absolute;
   border: solid black 2px;
@@ -131,6 +132,7 @@
   top: 8.5em;
   left: 19.2em;
 }
+
 .sign-in:hover {
   position: absolute;
   border: azure solid 4px;
@@ -143,6 +145,7 @@
   padding: 0.5em;
   font-weight: 700;
 }
+
 .sign-in-color {
   display: flex;
   background-color: cornflowerblue;
@@ -151,6 +154,7 @@
   margin: 9em 32em 0 32em;
   border-radius: 20px;
 }
+
 .sign-out {
   align-self: center;
   justify-self: center;
@@ -165,6 +169,7 @@
   font-weight: 700;
   margin-left: 1em;
 }
+
 .sign-out:hover {
   align-self: center;
   justify-self: center;
